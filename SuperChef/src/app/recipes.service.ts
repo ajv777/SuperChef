@@ -14,9 +14,9 @@ export class RecipesService {
   }
 
   // Search recipes. Replace "pizza" for the input text
-  getRecipesSearch() {
+  getRecipesSearch(pQuery) {
     return this.httpClient
-      .get(`${this.baseUrl}complexSearch?query=pizza${this.apiKey}`)
+      .get(`${this.baseUrl}complexSearch?query=` + pQuery + `${this.apiKey}`)
       .toPromise();
   }
 }
