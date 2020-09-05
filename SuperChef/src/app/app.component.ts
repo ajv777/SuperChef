@@ -9,11 +9,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AppComponent {
   recipes: any[];
+  recipe: any;
+
   constructor(
     private recipeService: RecipesService,
     private activatedRoute: ActivatedRoute
   ) {
     this.recipes = [];
+    this.recipe = {};
   }
 
   // Input text: recive 10 recipes per search
@@ -30,9 +33,28 @@ export class AppComponent {
     });
   }
 
+  // Replace with the pId - getRecipeById()
   async onClick() {
-    console.log('click');
-    const response = await this.recipeService.getRecipeByIdDos;
-    console.log(response);
+    const response = await this.recipeService.getRecipeByIdDos();
+    if (response['error']) {
+      console.log('error');
+    } else {
+      this.recipe = response;
+      console.log(this.recipe);
+    }
   }
+
+  /*   onClick() {
+    this.activatedRoute.params.subscribe(async (params) => {
+      const id = params.idItem;
+      const response = await this.recipeService.getRecipeById(id);
+      // works console.log(response);
+      if (response['error']) {
+        console.log('error');
+      } else {
+        this.recipe = response;
+      }
+      console.log(this.recipe);
+    });
+  } */
 }
