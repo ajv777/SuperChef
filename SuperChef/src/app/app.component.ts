@@ -29,4 +29,10 @@ export class AppComponent {
       }
     });
   }
+
+  async onClick() {
+    console.log('click');
+    const response = await this.recipeService.getRecipeByIdDos;
+    console.log(response);
+  }
 }
