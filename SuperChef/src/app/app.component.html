@@ -22,16 +22,14 @@
   </div>
 </header>
 
+<!-- RECIPE CARDS -->
 <main>
   <div class="container">
     <div class="row">
-      <div
-        class="card col-lg-3 col-md-12 col-sm-12"
-        *ngFor="let recipe of recipes"
-      >
+      <div class="recipe-card text-center" *ngFor="let recipe of recipes">
         <img class="card-img" [src]="recipe.image" alt="recipe" />
-        <div class="card-body">
-          <h5 class="card-title">{{ recipe.title }}</h5>
+        <div class="profile-content">
+          <h5>{{ recipe.title }}</h5>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>

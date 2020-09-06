@@ -7,6 +7,8 @@
   --fuenteSecundaria: "Handlee", cursive;
 }
 
+/* HEADER */
+
 body {
   font-family: var(--fuentePrincipal);
   font-size: 1em;
@@ -74,4 +76,44 @@ header .form-control {
 
 header .form-control:hover {
   cursor: pointer;
+}
+
+/* RECIPE CARDS */
+
+.recipe-card {
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.recipe-card img {
+  transition: all 0.25s linear;
+}
+
+.recipe-card .profile-content {
+  position: relative;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.recipe-card .profile-content::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  top: -10px;
+  left: 0px;
+  right: 0px;
+  background-color: #fff;
+  z-index: 0;
+  transform: skewY(3deg);
+}
+
+.recipe-card:hover img {
+  transform: rotate(5deg) scale(1.1, 1.1);
+  filter: brightness(110%);
 }
