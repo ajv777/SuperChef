@@ -1,7 +1,30 @@
-<div class="col-12">
-  <div>
-    <input type="text" class="form-control" (change)="onChange($event)" />
+<!-- <button (click)="onClick()"></button> -->
+
+<header>
+  <div class="background">
+    <div class="text">
+      <img class="background-img" src="../assets/spone.jpg" alt="" />
+    </div>
+    <div class="background-box">
+      <div class="background-box-logo">
+        <img src="../assets/logo-super-chef-remove.png" alt="" />
+      </div>
+      <h1 class="background-box-title">What´s in your fridge?</h1>
+      <h5 class="background-box-subtitle">
+        Just add your ingredients and SuperChef instantly finds matching recipes
+        from the most popular cooking websites!
+      </h5>
+      <input
+        class="form-control"
+        type="text"
+        placeholder="Search recipes by ingredients..."
+        (change)="onChange($event)"
+      />
+    </div>
   </div>
+</header>
+
+<main>
   <div class="container">
     <div class="row">
       <div
@@ -17,6 +40,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<button (click)="onClick()"></button>
+</main>
