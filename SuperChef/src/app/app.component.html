@@ -13,12 +13,18 @@
       Just add your ingredients and SuperChef instantly finds matching recipes
       from the most popular cooking websites!
     </h5>
-    <input
-      class="form-control"
-      type="text"
-      placeholder="Search recipes by ingredients..."
-      (change)="onChange($event)"
-    />
+    <!-- SEARCH -->
+    <div class="search-bar" (change)="onChange($event)">
+      <input
+        type="search"
+        pattern=".*\S.*"
+        required
+        placeholder="  Search recipes by ingredients..."
+      />
+      <button class="search-btn" type="submit">
+        <span>Search</span>
+      </button>
+    </div>
   </div>
 </header>
 
