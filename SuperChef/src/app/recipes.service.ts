@@ -25,7 +25,7 @@ export class RecipesService {
       .get(
         `${this.baseUrl}` +
           pId +
-          `information?includeNutrition=false&${this.apiKey}`
+          `/information?includeNutrition=false&${this.apiKey}`
       )
       .toPromise();
   }

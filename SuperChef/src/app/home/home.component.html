@@ -1,0 +1,44 @@
+<!-- <button (click)="onClick()"></button> -->
+
+<header class="background">
+  <div class="background-box-img">
+    <img class="background-img" src="../assets/spone.jpg" alt="" />
+  </div>
+  <div class="background-box">
+    <div class="background-box-logo">
+      <img src="../assets/logo-super-chef-remove.png" alt="" />
+    </div>
+    <h1 class="background-box-title">What´s in your fridge?</h1>
+    <h5 class="background-box-subtitle">
+      Just add your ingredients and SuperChef instantly finds matching recipes
+      from the most popular cooking websites!
+    </h5>
+    <!-- SEARCH -->
+    <div class="search-bar" (change)="onChange($event)">
+      <input
+        type="search"
+        pattern=".*\S.*"
+        required
+        placeholder="  Search recipes by ingredients..."
+      />
+      <button class="search-btn" type="submit">
+        <span>Search</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- RECIPE CARDS -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="recipe-card text-center" *ngFor="let recipe of recipes">
+        <img class="card-img" [src]="recipe.image" alt="recipe" />
+        <div class="profile-content">
+          <h5>{{ recipe.title }}</h5>
+          <a href="#" class="btn btn-danger">More details...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
