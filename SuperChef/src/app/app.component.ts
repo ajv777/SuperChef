@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RecipesService } from './recipes.service';
 import { ActivatedRoute } from '@angular/router';
+import { Recipes } from './models/recipes.model';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  recipes: any[];
+  recipes: Recipes[];
   recipe: any;
 
   constructor(
