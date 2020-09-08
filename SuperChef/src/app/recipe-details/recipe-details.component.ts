@@ -18,7 +18,7 @@ export class RecipeDetailsComponent implements OnInit {
 
   async ngOnInit() {
     this.activatedRoute.params.subscribe(async (params) => {
-      const id = params.idRecipe;
+      const id = params.id;
       const response = await this.recipeService.getRecipeById(id);
       console.log(response);
       if (response['error']) {

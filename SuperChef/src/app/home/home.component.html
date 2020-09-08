@@ -32,11 +32,15 @@
 <main>
   <div class="container">
     <div class="row">
-      <div class="recipe-card text-center" *ngFor="let recipe of recipes">
+      <div
+        class="recipe-card text-center"
+        [routerLink]="['/home', recipe.id]"
+        *ngFor="let recipe of recipes"
+      >
         <img class="card-img" [src]="recipe.image" alt="recipe" />
         <div class="profile-content">
           <h5>{{ recipe.title }}</h5>
-          <a href="#" class="btn btn-danger">More details...</a>
+          <p class="btn btn-danger">More details...</p>
         </div>
       </div>
     </div>
