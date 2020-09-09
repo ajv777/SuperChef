@@ -13,31 +13,35 @@ export class RecipesService {
     this.apiKey = '&apiKey=4dd4f0011d1a41aca49acfb28bd0643e';
   }
 
-  // Search recipes. Replace "pizza" for the input text
+  // Search recipes. Replace "pQuery" for the input text
   getRecipesSearch(pQuery) {
     return this.httpClient
       .get(`${this.baseUrl}complexSearch?query=` + pQuery + `${this.apiKey}`)
       .toPromise();
   }
 
+  // Get recipe by id
   getRecipeById(pId) {
     return this.httpClient
       .get(
         `${this.baseUrl}` +
           pId +
-          `/information?includeNutrition=false&${this.apiKey}`
+          `/information?includeNutrition=true&${this.apiKey}`
       )
       .toPromise();
   }
 
-  getRecipeByIdDos() {
+  // Get analyzed instructions by id
+
+  getInstuctionsById(pId) {
     return this.httpClient
-      .get(
-        `${this.baseUrl}716429/information?includeNutrition=false${this.apiKey}`
-      )
+      .get(`${this.baseUrl}` + pId + `/analyzedInstructions?${this.apiKey}`)
       .toPromise();
   }
 
   // Get recipe by id
   /*  https://api.spoonacular.com/recipes/716429/information?includeNutrition=false&apiKey=4dd4f0011d1a41aca49acfb28bd0643e */
+
+  /* Get analyzed instructions by id
+  https://api.spoonacular.com/recipes/324694/analyzedInstructions?apiKey=4dd4f0011d1a41aca49acfb28bd0643e */
 }
