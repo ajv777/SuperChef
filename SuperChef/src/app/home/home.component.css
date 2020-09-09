@@ -254,3 +254,15 @@ header .form-control:hover {
 .search-bar input:valid + .search-btn:active {
   transform: translateY(1px);
 }
+
+@media (max-width: 450px) {
+  .background-box-title {
+    text-align: center;
+  }
+  .background-box-subtitle {
+    text-align: center;
+  }
+  .background-box-logo {
+    max-width: 200px;
+  }
+}

@@ -1,4 +1,8 @@
 <article class="recipe">
+  <div class="recipe-header back-home">
+    <img src="../assets/logo-super-chef-remove.png" alt="" />
+  </div>
+  <!-- Header 2: change with the logo to back home and an arrow. Put the recipe info after recipe-header -->
   <div class="recipe-header">
     <h2>{{ recipe?.title }}</h2>
     <p>Servings: {{ recipe?.servings }}</p>
@@ -9,7 +13,6 @@
       </p>
     </div>
   </div>
-
   <div class="recipe-image">
     <div class="ingredient-image">
       <img [src]="recipe?.image" />

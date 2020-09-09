@@ -20,6 +20,16 @@
   padding: 5px 25px 5px 25px;
 }
 
+.back-home {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.back-home img {
+  width: 70px;
+  height: auto;
+}
+
 .recipe li {
   list-style: none;
   padding: 0;
