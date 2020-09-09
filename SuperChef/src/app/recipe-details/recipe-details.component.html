@@ -1,44 +1,46 @@
-<div class="pie-image">
-  <img [src]="recipe?.image" alt="recipe" />
-</div>
-<div class="pie-name">{{ recipe?.title }}</div>
-<p>Cooking time: {{ recipe?.cookingMinutes }} minutes</p>
-<p>Servings: {{ recipe?.servings }}</p>
-
-<!-- NUTRITION INFORMATION -->
-<h4>Nutrition Information</h4>
-<div class="container">
-  <div class="row">
-    <div>
-      <div>
-        <p>Cabs: {{ nutrition?.percentCarbs }} %</p>
-        <p>Fat: {{ nutrition?.percentFat }} %</p>
-        <p>Protein: {{ nutrition?.percentProtein }} %</p>
-      </div>
+<article class="recipe">
+  <div class="recipe-header">
+    <h2>{{ recipe?.title }}</h2>
+    <p>Servings: {{ recipe?.servings }}</p>
+    <div class="time">
+      <p>
+        Cooking time:
+        {{ recipe?.cookingMinutes }} minutes
+      </p>
     </div>
   </div>
-</div>
 
-<!-- INGREDIENTS -->
-<h4>INGREDIENTS</h4>
-<div class="container">
-  <div class="row">
-    <div>
-      <div *ngFor="let ingredient of ingredients">
-        <p>{{ ingredient.originalString }}</p>
-      </div>
+  <div class="recipe-image">
+    <div class="ingredient-image">
+      <img [src]="recipe?.image" />
     </div>
   </div>
-</div>
 
-<!-- INSTRUCTIONS -->
-<h4>STEPS</h4>
-<div class="container">
-  <div class="row">
-    <div>
-      <ul *ngFor="let step of steps">
-        <li>{{ step.number }} {{ step.step }}</li>
+  <div class="recipe-text">
+    <h3>Ingredients</h3>
+    <div class="inner-text">
+      <h3></h3>
+      <ul *ngFor="let ingredient of ingredients">
+        <li>{{ ingredient.originalString }}</li>
       </ul>
     </div>
   </div>
-</div>
+
+  <div class="recipe-directions">
+    <h3>Instructions</h3>
+    <div class="inner-directions">
+      <ul *ngFor="let step of steps">
+        <li>{{ step.number }}. {{ step.step }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="comments">
+    <h3>Information nutritional</h3>
+    <div>
+      <p>Cabs: {{ nutrition?.percentCarbs }} %</p>
+      <p>Fat: {{ nutrition?.percentFat }} %</p>
+      <p>Protein: {{ nutrition?.percentProtein }} %</p>
+    </div>
+  </div>
+</article>
