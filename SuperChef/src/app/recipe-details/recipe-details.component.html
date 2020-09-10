@@ -1,7 +1,10 @@
-<article class="recipe">
-  <div class="recipe-header back-home">
-    <img src="../assets/logo-super-chef-remove.png" alt="" />
+<!-- <div class="recipe-logo">
+  <div class="logo-box">
+    <img src="../assets/logo-blue.png" />
   </div>
+  <p>Back to home</p>
+</div> -->
+<article class="recipe">
   <!-- Header 2: change with the logo to back home and an arrow. Put the recipe info after recipe-header -->
   <div class="recipe-header">
     <h2>{{ recipe?.title }}</h2>
@@ -13,37 +16,39 @@
       </p>
     </div>
   </div>
-  <div class="recipe-image">
-    <div class="ingredient-image">
-      <img [src]="recipe?.image" />
+  <div class="container">
+    <div class="recipe-image">
+      <div class="ingredient-image">
+        <img [src]="recipe?.image" />
+      </div>
     </div>
-  </div>
 
-  <div class="recipe-text">
-    <h3>Ingredients</h3>
-    <div class="inner-text">
-      <h3></h3>
-      <ul *ngFor="let ingredient of ingredients">
-        <li>{{ ingredient.originalString }}</li>
-      </ul>
+    <div class="recipe-text">
+      <h3>Ingredients</h3>
+      <div class="inner-text">
+        <h3></h3>
+        <ul *ngFor="let ingredient of ingredients">
+          <li>{{ ingredient.originalString }}</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div class="recipe-directions">
-    <h3>Instructions</h3>
-    <div class="inner-directions">
-      <ul *ngFor="let step of steps">
-        <li>{{ step.number }}. {{ step.step }}</li>
-      </ul>
+    <div class="recipe-directions">
+      <h3>Instructions</h3>
+      <div class="inner-directions">
+        <ul *ngFor="let step of steps">
+          <li>{{ step.number }}. {{ step.step }}</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div class="comments">
-    <h3>Information nutritional</h3>
-    <div>
-      <p>Cabs: {{ nutrition?.percentCarbs }} %</p>
-      <p>Fat: {{ nutrition?.percentFat }} %</p>
-      <p>Protein: {{ nutrition?.percentProtein }} %</p>
+    <div class="comments">
+      <h3>Information nutritional</h3>
+      <div>
+        <p>Cabs: {{ nutrition?.percentCarbs }} %</p>
+        <p>Fat: {{ nutrition?.percentFat }} %</p>
+        <p>Protein: {{ nutrition?.percentProtein }} %</p>
+      </div>
     </div>
   </div>
 </article>

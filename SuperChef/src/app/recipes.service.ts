@@ -10,7 +10,9 @@ export class RecipesService {
 
   constructor(private httpClient: HttpClient) {
     this.baseUrl = 'https://api.spoonacular.com/recipes/';
-    this.apiKey = '&apiKey=4dd4f0011d1a41aca49acfb28bd0643e';
+    this.apiKey = '&apiKey=6848b484b603434cbc1f4ac30984a966';
+    /*     this.apiKey = '&apiKey=4dd4f0011d1a41aca49acfb28bd0643e'; */
+    /* another apiKey: 6848b484b603434cbc1f4ac30984a966 */
   }
 
   // Search recipes. Replace "pQuery" for the input text
