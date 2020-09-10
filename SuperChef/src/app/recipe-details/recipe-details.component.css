@@ -54,6 +54,12 @@ h3 {
   border-bottom: 7px solid #d62828;
 }
 
+/* .recipe-image img:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+} */
+
 /* Recipe body */
 
 .recipe-body {
@@ -96,3 +102,5 @@ h3 {
     margin-left: 0px;
   }
 }
+
+/* FOOTER */
