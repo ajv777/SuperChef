@@ -1,54 +1,79 @@
-<!-- <div class="recipe-logo">
-  <div class="logo-box">
-    <img src="../assets/logo-blue.png" />
+<nav class="container-fluid header">
+  <div class="header-logo" [routerLink]="['/home']">
+    <img src="../assets/logo-horizontal.png" alt="superchef" />
   </div>
-  <p>Back to home</p>
-</div> -->
-<article class="recipe">
-  <!-- Header 2: change with the logo to back home and an arrow. Put the recipe info after recipe-header -->
-  <div class="recipe-header">
-    <h2>{{ recipe?.title }}</h2>
-    <p>Servings: {{ recipe?.servings }}</p>
-    <div class="time">
-      <p>
-        Cooking time:
-        {{ recipe?.cookingMinutes }} minutes
-      </p>
-    </div>
-  </div>
-  <div class="container">
+</nav>
+<body class="container recipe">
+  <div class="recipe-title">
     <div class="recipe-image">
-      <div class="ingredient-image">
-        <img [src]="recipe?.image" />
-      </div>
+      <img src="../assets/spone.jpg" />
     </div>
-
-    <div class="recipe-text">
-      <h3>Ingredients</h3>
-      <div class="inner-text">
-        <h3></h3>
-        <ul *ngFor="let ingredient of ingredients">
-          <li>{{ ingredient.originalString }}</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="recipe-directions">
-      <h3>Instructions</h3>
-      <div class="inner-directions">
-        <ul *ngFor="let step of steps">
-          <li>{{ step.number }}. {{ step.step }}</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="comments">
-      <h3>Information nutritional</h3>
-      <div>
-        <p>Cabs: {{ nutrition?.percentCarbs }} %</p>
-        <p>Fat: {{ nutrition?.percentFat }} %</p>
-        <p>Protein: {{ nutrition?.percentProtein }} %</p>
+    <div class="recipe-data">
+      <h2>PASTA</h2>
+      <div class="recipe-data-info">
+        <p><span>Cooking time:</span> 150 minutes</p>
+        <p><span>Servings:</span> 5</p>
+        <p><span>Grasas:</span> 5%</p>
+        <p><span>Protein:</span> 23,34%</p>
+        <p><span>Carbs:</span> 5,3%</p>
       </div>
     </div>
   </div>
-</article>
+  <div class="recipe-body">
+    <div class="recipe-body-ingredients">
+      <h3>Ingredients</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">2 puerros grandes</li>
+        <li class="list-group-item">2 patatas medianas</li>
+        <li class="list-group-item">
+          3 manzanas golden, fuji, gala... la que nos guste
+        </li>
+        <li class="list-group-item">
+          150 ml de leche evaporada o nata líquida
+        </li>
+        <li class="list-group-item">Cebollino picado</li>
+        <li class="list-group-item">Mantequilla Sal y pimienta</li>
+      </ul>
+    </div>
+    <div class="recipe-body-steps">
+      <h3>Steps</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Limpiamos y lavamos los puerros.</li>
+        <li class="list-group-item">
+          Retiramos las hojas verdes y troceamos la parte blanca.
+        </li>
+        <li class="list-group-item">
+          En una cacerola fundimos un poco de mantequilla y añadimos el puerro
+          troceado.
+        </li>
+        <li class="list-group-item">
+          Mientras, lavamos, pelamos y troceamos patatas y manzanas. Lo añadimos
+          todo a la cazuela.
+        </li>
+        <li class="list-group-item">
+          Vertemos ahora el litro de caldo (si no tenemos, podemos hacer un
+          caldo antes con las partes verdes de los puerros, la peladura de las
+          patatas y las pieles y corazones de las manzanas).
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+<!-- REPLACE -->
+
+<!-- <img [src]="recipe?.image" alt="recipe" />
+<div>{{ recipe?.title }}</div>
+<p>Cooking time: {{ recipe?.cookingMinutes }} minutes</p>
+<p>Servings: {{ recipe?.servings }}</p>
+<ul *ngFor="let ingredient of ingredients">
+  <li>{{ ingredient.originalString }}</li>
+</ul>
+<ul *ngFor="let step of steps">
+  <li>{{ step.number }}. {{ step.step }}</li>
+</ul>
+<div>
+  <p>Cabs: {{ nutrition?.percentCarbs }} %</p>
+  <p>Fat: {{ nutrition?.percentFat }} %</p>
+  <p>Protein: {{ nutrition?.percentProtein }} %</p>
+</div> -->
