@@ -54,11 +54,15 @@ h3 {
   border-bottom: 7px solid #d62828;
 }
 
-/* .recipe-image img:hover {
-  transform: scale(1.1);
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-} */
+.btn-primary {
+  background-color: #d62828;
+  border: none;
+  opacity: 0.7;
+}
+
+.btn-primary:hover {
+  opacity: 1;
+}
 
 /* Recipe body */
 
