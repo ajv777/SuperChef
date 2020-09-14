@@ -3,6 +3,59 @@
     <img src="../assets/logo-horizontal.png" alt="superchef" />
   </div>
 </nav>
+
+<!-- TRUE DATA -->
+<!-- <body class="container recipe">
+  <div class="recipe-title">
+    <div class="recipe-image">
+      <img [src]="recipe?.image" />
+    </div>
+    <div class="recipe-data">
+      <h2>{{ recipe?.title }}</h2>
+      <div class="recipe-data-info">
+        <p><span>Cooking time:</span> {{ recipe?.readyInMinutes }} minutes</p>
+        <p><span>Servings:</span> {{ recipe?.servings }}</p>
+        <p>
+          <a
+            class="btn btn-primary"
+            data-toggle="collapse"
+            href="#collapseNutrition"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseNutrition"
+          >
+            Nutrition information
+          </a>
+        </p>
+        <div class="collapse" id="collapseNutrition">
+          <div class="card card-body">
+            <p><span>Cabs:</span> {{ nutrition?.percentCarbs }} %</p>
+            <p><span>Fat:</span> {{ nutrition?.percentFat }} %</p>
+            <p><span>Protein:</span> {{ nutrition?.percentProtein }} %</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-body">
+    <div class="recipe-body-ingredients">
+      <h3>Ingredients</h3>
+      <ul class="list-ingredients" *ngFor="let ingredient of ingredients">
+        <div class="ingredient">
+          <li>{{ ingredient.originalString }}</li>
+        </div>
+      </ul>
+    </div>
+    <div class="recipe-body-steps">
+      <h3>Steps</h3>
+      <ul class="list-group list-group-flush" *ngFor="let step of steps">
+        <li class="list-group-item">{{ step.number }}. {{ step.step }}</li>
+      </ul>
+    </div>
+  </div>
+</body> -->
+
+<!-- FAKE DATA  -->
 <body class="container recipe">
   <div class="recipe-title">
     <div class="recipe-image">
@@ -38,35 +91,33 @@
   <div class="recipe-body">
     <div class="recipe-body-ingredients">
       <h3>Ingredients</h3>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">2 puerros grandes</li>
-        <li class="list-group-item">2 patatas medianas</li>
-        <li class="list-group-item">
+      <ul class="list-ingredients">
+        <li class="ingredient">2 puerros grandes</li>
+        <li class="ingredient">2 patatas medianas</li>
+        <li class="ingredient">
           3 manzanas golden, fuji, gala... la que nos guste
         </li>
-        <li class="list-group-item">
-          150 ml de leche evaporada o nata líquida
-        </li>
-        <li class="list-group-item">Cebollino picado</li>
-        <li class="list-group-item">Mantequilla Sal y pimienta</li>
+        <li class="ingredient">150 ml de leche evaporada o nata líquida</li>
+        <li class="ingredient">Cebollino picado</li>
+        <li class="ingredient">Mantequilla Sal y pimienta</li>
       </ul>
     </div>
     <div class="recipe-body-steps">
       <h3>Steps</h3>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Limpiamos y lavamos los puerros.</li>
-        <li class="list-group-item">
+      <ul class="list-ingredients">
+        <li class="ingredient">Limpiamos y lavamos los puerros.</li>
+        <li class="ingredient">
           Retiramos las hojas verdes y troceamos la parte blanca.
         </li>
-        <li class="list-group-item">
+        <li class="ingredient">
           En una cacerola fundimos un poco de mantequilla y añadimos el puerro
           troceado.
         </li>
-        <li class="list-group-item">
+        <li class="ingredient">
           Mientras, lavamos, pelamos y troceamos patatas y manzanas. Lo añadimos
           todo a la cazuela.
         </li>
-        <li class="list-group-item">
+        <li class="ingredient">
           Vertemos ahora el litro de caldo (si no tenemos, podemos hacer un
           caldo antes con las partes verdes de los puerros, la peladura de las
           patatas y las pieles y corazones de las manzanas).
@@ -75,25 +126,6 @@
     </div>
   </div>
 </body>
-<app-footer></app-footer>
+
 <!-- FOOTER -->
-
-<!-- REPLACE -->
-
-<!-- <img [src]="recipe?.image" alt="recipe" />
-<div>{{ recipe?.title }}</div>
-<p>Cooking time: {{ recipe?.cookingMinutes }} minutes</p>
-<p>Servings: {{ recipe?.servings }}</p>
-<ul *ngFor="let ingredient of ingredients">
-  <li>{{ ingredient.originalString }}</li>
-</ul>
-<ul *ngFor="let step of steps">
-  <li>{{ step.number }}. {{ step.step }}</li>
-</ul>
-<div>
-  <p>Cabs: {{ nutrition?.percentCarbs }} %</p>
-  <p>Fat: {{ nutrition?.percentFat }} %</p>
-  <p>Protein: {{ nutrition?.percentProtein }} %</p>
-</div> -->
-
-<!-- DESPLEGABLE -->
+<app-footer></app-footer>
