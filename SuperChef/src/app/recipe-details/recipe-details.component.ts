@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { RecipesService } from '../recipes.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { identity } from 'rxjs';
+import { Ingredients } from '../models/ingredients.model';
+import { Steps } from '../models/steps.model';
 
 @Component({
   selector: 'app-recipe-details',
@@ -10,9 +12,10 @@ import { identity } from 'rxjs';
 })
 export class RecipeDetailsComponent implements OnInit {
   recipe: any;
-  ingredients: any;
-  steps: any;
+  ingredients: Ingredients;
+  steps: Steps;
   nutrition: any;
+  nutrients: any;
 
   constructor(
     private recipeService: RecipesService,
@@ -36,9 +39,10 @@ export class RecipeDetailsComponent implements OnInit {
         this.steps = instructions[0].steps;
         /* Review What information I want to show */
         this.nutrition = this.recipe.nutrition.caloricBreakdown;
+        this.nutrients = this.recipe.nutrition.nutrients;
         // console.log(this.steps);
         // console.log(this.ingredients);
-        console.log(this.nutrition);
+        console.log(this.nutrients);
       }
     });
   }
