@@ -1,0 +1,42 @@
+/* FOOTER */
+
+.footer {
+  min-height: 100%;
+  background-color: #003049;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.footer-name {
+  align-items: center;
+}
+
+.footer-icons {
+  text-align: center;
+  margin: 10px;
+}
+
+.footer-icon-linkedin,
+.footer-icon-github {
+  width: 30px;
+  display: inline-block;
+}
+
+.footer-icon-linkedin {
+  margin-right: 10px;
+}
+
+.footer-icon-github {
+  margin-left: 10px;
+}
+
+.footer-icon-linkedin {
+  margin-left: 30px;
+}
+
+.footer-icons img {
+  width: 100%;
+}
