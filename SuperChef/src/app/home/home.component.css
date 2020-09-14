@@ -266,3 +266,34 @@ header .form-control:hover {
     max-width: 200px;
   }
 }
+
+/* FOOTER */
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -170px;
+  background-color: #003049;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 1rem;
+  margin-top: 3%;
+}
+
+* html .wrapper {
+  height: 100%;
+}
+
+.push {
+  height: 10px;
+}
+
+.logo {
+  width: 30px;
+  height: auto;
+  display: inline-block;
+}
+.logo img {
+  width: 100%;
+}
